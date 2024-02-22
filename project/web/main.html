@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" type="" href="note-task-comment-message-edit-write_108613.png">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script type="text/javascript" src="/eel.js"></script>
+    <title>Карточка</title>
+</head>
+<body>
+
+
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasExampleLabel">How to use</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <div id="promptExplain">
+       <span>If you want to use this app, you need to enter an accurate prompt in prompt input and chose gpt model.
+        Here is an example:</span> Дай мне вопрос для начинающего в изучении python, не говори ничего лишнего, просто вопрос. Твой ответ должен содержать не более 12 слов.
+        <span>Then you need to press "press" button, task will appear. After you should enter your answer to the question in "Your answer" field and press "Check" button.</span>
+    </div>
+      <div class="d-flex flex-row" id="settingsBtns">
+          <button type="button" class="btn btn-secondary" id="toggleParticlesBtn">particles</button>
+      <div class="dropdown-center">
+        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Color
+        </button>
+        <ul class="dropdown-menu">
+            <li><a class="dropdown-item colorBtn" href="#" id="Blue">Blue</a></li>
+            <li><a class="dropdown-item colorBtn" href="#" id="Gray">Gray</a></li>
+            <li><a class="dropdown-item colorBtn" href="#" id="Green">Green</a></li>
+            <li><a class="dropdown-item colorBtn" href="#" id="Red">Red</a></li>
+            <li><a class="dropdown-item colorBtn" href="#" id="Yellow">Yellow</a></li>
+            <li><a class="dropdown-item colorBtn" href="#" id="Aqua">Aqua</a></li>
+            <li><a class="dropdown-item colorBtn" href="#" id="White">White</a></li>
+            <li><a class="dropdown-item colorBtn" href="#" id="Dark">Dark</a></li>
+        </ul>
+      </div>
+      </div>
+  </div>
+</div>
+
+<nav class="navbar bg-body-tertiary">
+    <form class="container-fluid justify-content-start">
+        <button class="btn btn-outline-dark me-2 button" type="button" id="Math">gpt-3.5</button>
+        <button class="btn btn-outline-dark me-2 button" type="button" id="Python">gpt-4</button>
+        <button class="btn btn-outline-dark me-2 button" type="button" id="Idk">Mhm...Monke!</button>
+        <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+            Instructions
+        </a>
+    </form>
+</nav>
+
+<div class="textb">
+    <h1  id="textb">Press the buttons on top</h1>
+</div>
+
+<div class="inpu">
+    <div class="input-group input-group-lg">
+  <span class="input-group-text" id="inputGroup-sizing-lg">Prompt</span>
+  <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" id="inputid">
+</div>
+</div>
+
+<div class="mtab">
+    <div class="card" style="width: 50rem; height: 12rem;" id="card">
+        <div class="card-header" style = "align-items: center">
+            Card
+
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">Here is your task</h5>
+            <p class="card-text" id="in">Here will be your task</p>
+            <button class="showButton" id="show">Press</button>
+        </div>
+    </div>
+</div>
+
+<div class="itab">
+    <div class="input-group mb-3">
+        <span class="input-group-text" id="inputGroup-sizing-default">Your answer</span>
+        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" id="answerInput">
+        <button class="btn btn-outline-dark me-2 button" type="button" id="checkButton">Check</button>
+    </div>
+    <h5 class="card-title" id="checkMessage">Right or wrong?</h5>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
