@@ -70,11 +70,11 @@ async function inputCheck(answerPrompt){
 }
 
 // получение от гпт ответа и вставка в html
-eel.expose(get_quote);
-async function get_quote() {
+eel.expose(gptresp);
+async function gptresp() {
     try {
         console.log("Getting quote...");
-        let response = await eel.get_quote()();
+        let response = await eel.gptresp()();
         console.log("Response from server:", response);
 
         if (response && response.error) {
@@ -103,7 +103,7 @@ async function check(){
 
 //запуск функций
 jQuery('#show').on('click', function () {
-    get_quote();
+    gptresp();
 });
 
 jQuery('checkButton').on('click', function () {
